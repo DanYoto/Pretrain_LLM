@@ -18,7 +18,7 @@ class MyModelConfig:
 @dataclass
 class Trainingconfig:
     epochs: int = 5
-    batch_size_per_device: int = 8
+    per_device_train_batch_size: int = 8
     learning_rate: float = 1e-4
     div_factor: float = 1e4
     mix_precision: str = 'bf16'
@@ -43,6 +43,8 @@ class Trainingconfig:
     seed: int = 42
     dataloader_buffer_size: int = 1024
     max_seq_length: int = 512
+    
+    optim = "adafaactor"
     
 @dataclass
 class T5ModelConfig:
