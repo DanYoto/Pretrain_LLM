@@ -13,13 +13,13 @@ from ..config import *
 
 def pretrain(config: Trainingconfig):
     # load tokenizer
-    tokanizer = PreTrainedTokenizer.from_pretrained(config.tokenizer_dir)
+    tokenizer = PreTrainedTokenizer.from_pretrained(config.tokenizer_dir)
     # load config
     t5_config = get_T5_config(
         T5ModelConfig,
-        vocab_size=len(tokanizer),
-        decoder_start_token_id=tokanizer.pad_token_id,
-        eos_token_id=tokanizer.eos_token_id,
+        vocab_size=len(tokenizer),
+        decoder_start_token_id=tokenizer.pad_token_id,
+        eos_token_id=tokenizer.eos_token_id,
     )
     
     # initialize model
@@ -27,14 +27,14 @@ def pretrain(config: Trainingconfig):
     
     # load dataset
     train_dataset = get_dataset(
-        config.train_data_dir, split="train", tokenizer=tokanizer
+        config.train_data_dir, split="train", tokenizer=tokenizer
     )
 
     # training args
     generation_config = GenerationConfig()
-    generation_config.eos_token_id = tokanizer.eos_token_id
-    generation_config.pad_token_id = tokanizer.pad_token_id
-    generation_config.decoder_start_token_id = tokanizer.pad_token_id
+    generation_config.eos_token_id = tokenizer.eos_token_id
+    generation_config.pad_token_id = tokenizer.pad_token_id
+    generation_config.decoder_start_token_id = tokenizer.pad_token_id
     generation_config.max_new_tokens = 512
     generation_config.num_beams = 1
     generation_config.do_sample = False
@@ -58,4 +58,25 @@ def pretrain(config: Trainingconfig):
         optim=config.optim,
     )
     
-    collator = 
+    collator = DataCollatorForSeq2Seq(tokenizer = tokenizer, max_length = config.max_seq_length)
+    empty_cuda_cache = MyTrainerCallback()
+    
+    # define the trainer
+    trainer = Seq2SeqTrainer(
+        model = model,
+        args = training_args,
+        train_dataset = train_dataset,
+        tokenizer = tokenizer,
+        data_collator = collator,
+        callbacks = [empty_cuda_cache]
+    )
+    
+    # train
+    trainer.train()
+    
+    # save the model
+    trainer.save_model(config.output_dir)
+
+if __name__ == "__main__":
+    config = Trainingconfig()
+    pretrain(config)

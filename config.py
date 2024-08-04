@@ -1,20 +1,6 @@
 from dataclasses import dataclass
 from transformers import T5Config
 
-class MyModelConfig:
-    # size of intermediate feed forward layer
-    def __init__(self, d_model = 512, d_kv = 64, n_heads = 8, n_layers = 6, d_ff = 2048, dropout_rate = 0.1, vocab_size = 32128, eos_token_id = 1, decoder_start_token_id = 0):
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.n_layers = n_layers
-        self.d_ff = d_ff
-        self.dropout_rate = dropout_rate
-        self.vocab_size = vocab_size
-        self.d_kv = d_kv
-        self.eos_token_id = eos_token_id
-        self.decoder_start_token_id = decoder_start_token_id
-     
-
 @dataclass
 class Trainingconfig:
     epochs: int = 5
