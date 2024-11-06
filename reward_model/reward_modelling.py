@@ -37,8 +37,8 @@ class RewardDataCollatorWithPadding:
     def __call__(self, data_samples):
         merged_features = []
         for data_sample in data_samples:
-            merged_features.append({"input_ids_acc": data_sample['input_ids_acc'], "attention_mask_acc": data_sample['attention_mask_acc']})
-            merged_features.append({"input_ids_rej": data_sample['input_ids_rej'], "attention_mask_rej": data_sample['input_ids_rej']})
+            merged_features.append({"input_ids": data_sample['input_ids_acc'], "attention_mask": data_sample['attention_mask_acc']})
+            merged_features.append({"input_ids": data_sample['input_ids_rej'], "attention_mask": data_sample['attention_mask_rej']})
 
         batch = self.tokenizer.pad(merged_features, padding = self.padding, max_length = self.max_length, return_tensors = self.return_tensors)
         return {
@@ -48,14 +48,20 @@ class RewardDataCollatorWithPadding:
         }
 
 class RewardTrainer(Trainer):
-    # Define how to compute the reward loss. We use the InstructGPT pairwise logloss: https://huggingface.co/papers/2203.02155
     def compute_loss(self, model, inputs, return_outputs=False):
-        rewards_j = model(input_ids=inputs["input_ids_j"], attention_mask=inputs["attention_mask_j"])[0]
-        rewards_k = model(input_ids=inputs["input_ids_k"], attention_mask=inputs["attention_mask_k"])[0]
+        rewards = model(
+            input_ids=inputs["input_ids"], attention_mask=inputs["attention_mask"]
+        )[0]
+        bsz = rewards.size(0)
+        jidx = torch.arange(0, bsz, 2)
+        kidx = jidx + 1
+        rewards_j = rewards[jidx]
+        rewards_k = rewards[kidx]
         loss = -nn.functional.logsigmoid(rewards_j - rewards_k).mean()
         if return_outputs:
             return loss, {"rewards_j": rewards_j, "rewards_k": rewards_k}
         return loss
+
 
 if __name__ == "__main__":
         
@@ -64,24 +70,27 @@ if __name__ == "__main__":
         entity=WANDB_ENTITY,
         job_type="train",
         tags=WANDB_TAGS,
-        group="room_layout",
+        group="rl_test",
         config=config,
     )
 
+    model = AutoModelForSequenceClassification.from_pretrained(config.model_name, torch_dtype = torch.bfloat16, device_map = "auto", trust_remote_code = True, num_labels = 1)
     tokenizer = AutoTokenizer.from_pretrained(config.model_name)
     tokenizer.truncation_side = "left"
     # in case tokenizer doesn't have pad token
     tokenizer.pad_token = tokenizer.eos_token
+    # align model's pad token with tokenizer
+    model.config.pad_token_id = tokenizer.pad_token_id
+
+
     tokenizer.model_max_length = config.max_seq_length
     train_dataset = build_dataset(tokenizer, config.dataset_path)
-
-    model = AutoModelForSequenceClassification.from_pretrained(config.model_name, torch_dtype = torch.bfloat16, device_map = "auto", trust_remote_code = True, num_labels = 1)
 
     trainer = RewardTrainer(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
-        data_collator=RewardDataCollatorWithPadding(tokenizer=tokenizer),
+        data_collator=RewardDataCollatorWithPadding(tokenizer=tokenizer, padding=True, max_length=config.max_seq_length, pad_to_multiple_of=None, return_tensors='pt'),
     )
 
     trainer.train()

@@ -15,7 +15,7 @@ WANDB_TAGS = [
 ]
 
 config = SimpleNamespace(
-    dataset_path="/home/azureuser/cloudfiles/code/Users/yutong.jiang2/autolayout/data/labeled_data_multiple_placement",
+    dataset_path="trl-lib/ultrafeedback_binarized",
     model_name="meta-llama/Llama-3.2-1B-Instruct",
     per_device_train_batch_size=3,
     gradient_accumulation_steps=4,
@@ -49,6 +49,7 @@ training_args = TrainingArguments(
     logging_strategy="steps",
     logging_steps=1,
     save_strategy="no",
+    remove_unused_columns=False
 )
 
 model_kwargs = dict(
