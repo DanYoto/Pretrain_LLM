@@ -6,12 +6,12 @@ from peft import LoraConfig
 WANDB_PROJECT = "RL_experiment"
 WANDB_ENTITY = "digital-ethics-responsible-ai"
 WANDB_TAGS = [
-    #"meta-llama/Llama-3.2-1B-Instruct",
+    # "meta-llama/Llama-3.2-1B-Instruct",
     "mistralai/Mistral-7B-Instruct-v0.2",
     "Reinforcement_Learning_experiment",
     "reward_modeling",
     "rotera",
-    #"agentic methods for function calling",
+    # "agentic methods for function calling",
 ]
 
 config = SimpleNamespace(
@@ -30,7 +30,7 @@ config = SimpleNamespace(
     max_steps=-1,
     num_train_epochs=3,
 )
-   
+
 training_args = TrainingArguments(
     output_dir="/home/azureuser/cloudfiles/code/Users/yutong.jiang2/autolayout/sft_and_dpo_script/sft_scripts/output",
     per_device_train_batch_size=config.per_device_train_batch_size,
@@ -49,7 +49,7 @@ training_args = TrainingArguments(
     logging_strategy="steps",
     logging_steps=1,
     save_strategy="no",
-    remove_unused_columns=False
+    remove_unused_columns=False,
 )
 
 model_kwargs = dict(
