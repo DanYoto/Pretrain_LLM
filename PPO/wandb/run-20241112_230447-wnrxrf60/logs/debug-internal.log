@@ -1,0 +1,198 @@
+2024-11-12 23:04:48,968 INFO    StreamThr :252906 [internal.py:wandb_internal():86] W&B internal server running at pid: 252906, started at: 2024-11-12 23:04:48.951909
+2024-11-12 23:04:48,969 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: status
+2024-11-12 23:04:48,970 INFO    WriterThread:252906 [datastore.py:open_for_write():87] open: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/run-wnrxrf60.wandb
+2024-11-12 23:04:48,993 DEBUG   SenderThread:252906 [sender.py:send():379] send: header
+2024-11-12 23:04:49,703 DEBUG   SenderThread:252906 [sender.py:send():379] send: run
+2024-11-12 23:04:49,927 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: check_version
+2024-11-12 23:04:49,941 INFO    SenderThread:252906 [dir_watcher.py:__init__():211] watching files in: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files
+2024-11-12 23:04:49,942 INFO    SenderThread:252906 [sender.py:_start_run_threads():1124] run started: wnrxrf60 with start time 1731452688.957491
+2024-11-12 23:04:49,942 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: check_version
+2024-11-12 23:04:49,984 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: run_start
+2024-11-12 23:04:50,032 DEBUG   HandlerThread:252906 [system_info.py:__init__():26] System info init
+2024-11-12 23:04:50,032 DEBUG   HandlerThread:252906 [system_info.py:__init__():41] System info init done
+2024-11-12 23:04:50,032 INFO    HandlerThread:252906 [system_monitor.py:start():194] Starting system monitor
+2024-11-12 23:04:50,033 INFO    SystemMonitor:252906 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-11-12 23:04:50,033 INFO    HandlerThread:252906 [system_monitor.py:probe():214] Collecting system info
+2024-11-12 23:04:50,033 INFO    SystemMonitor:252906 [interfaces.py:start():190] Started cpu monitoring
+2024-11-12 23:04:50,034 INFO    SystemMonitor:252906 [interfaces.py:start():190] Started disk monitoring
+2024-11-12 23:04:50,035 INFO    SystemMonitor:252906 [interfaces.py:start():190] Started gpu monitoring
+2024-11-12 23:04:50,036 INFO    SystemMonitor:252906 [interfaces.py:start():190] Started memory monitoring
+2024-11-12 23:04:50,036 INFO    SystemMonitor:252906 [interfaces.py:start():190] Started network monitoring
+2024-11-12 23:04:50,094 DEBUG   HandlerThread:252906 [system_info.py:probe():150] Probing system
+2024-11-12 23:04:50,114 DEBUG   HandlerThread:252906 [system_info.py:_probe_git():135] Probing git
+2024-11-12 23:04:50,357 DEBUG   HandlerThread:252906 [system_info.py:_probe_git():143] Probing git done
+2024-11-12 23:04:50,357 DEBUG   HandlerThread:252906 [system_info.py:probe():198] Probing system done
+2024-11-12 23:04:50,357 DEBUG   HandlerThread:252906 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-1068-azure-x86_64-with-glibc2.31', 'python': '3.10.12', 'heartbeatAt': '2024-11-12T23:04:50.094320', 'startedAt': '2024-11-12T23:04:47.869480', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/PPO.py', 'codePathLocal': 'PPO.py', 'codePath': 'PPO/PPO.py', 'git': {'remote': 'git@github.com:DanYoto/Pretrain_LLM.git', 'commit': '38986a0de86b03b214ffe28426ebbc43481b50ad'}, 'email': 'yutong.jiang2@ingka.ikea.com', 'root': '/mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM', 'host': 'yutong-8gpus-training', 'username': 'azureuser', 'executable': '/home/azureuser/.pyenv/versions/3.10.12/bin/python', 'cpu_count': 96, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2453.9835937499965, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 3285.689, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}, {'current': 2445.438, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 118.05400085449219, 'used': 90.79131317138672}}, 'gpu': 'NVIDIA A100-SXM4-80GB', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}, {'name': 'NVIDIA A100-SXM4-80GB', 'memory_total': 85899345920}], 'memory': {'total': 1771.7364349365234}}
+2024-11-12 23:04:50,357 INFO    HandlerThread:252906 [system_monitor.py:probe():224] Finished collecting system info
+2024-11-12 23:04:50,357 INFO    HandlerThread:252906 [system_monitor.py:probe():227] Publishing system info
+2024-11-12 23:04:50,357 DEBUG   HandlerThread:252906 [system_info.py:_save_code():44] Saving code
+2024-11-12 23:04:50,566 DEBUG   HandlerThread:252906 [system_info.py:_save_code():65] Saving code done
+2024-11-12 23:04:50,566 DEBUG   HandlerThread:252906 [system_info.py:_save_patches():82] Saving git patches
+2024-11-12 23:04:51,021 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/code/PPO/PPO.py
+2024-11-12 23:04:51,021 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/code
+2024-11-12 23:04:51,021 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/code/PPO
+2024-11-12 23:04:51,374 DEBUG   HandlerThread:252906 [system_info.py:_save_patches():124] Saving git patches done
+2024-11-12 23:04:51,496 INFO    HandlerThread:252906 [system_monitor.py:probe():229] Finished publishing system info
+2024-11-12 23:04:51,498 DEBUG   SenderThread:252906 [sender.py:send():379] send: files
+2024-11-12 23:04:51,498 INFO    SenderThread:252906 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-11-12 23:04:51,498 INFO    SenderThread:252906 [sender.py:_save_file():1390] saving file code/PPO/PPO.py with policy now
+2024-11-12 23:04:51,831 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: python_packages
+2024-11-12 23:04:51,831 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: python_packages
+2024-11-12 23:04:51,833 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: stop_status
+2024-11-12 23:04:51,834 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-12 23:04:51,913 INFO    wandb-upload_0:252906 [upload_job.py:push():131] Uploaded file /tmp/tmpf7yg4s2xwandb/qmync2if-wandb-metadata.json
+2024-11-12 23:04:51,920 INFO    wandb-upload_1:252906 [upload_job.py:push():131] Uploaded file /tmp/tmpf7yg4s2xwandb/bupsekco-code/PPO/PPO.py
+2024-11-12 23:04:51,969 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: stop_status
+2024-11-12 23:04:52,096 DEBUG   SenderThread:252906 [sender.py:send():379] send: telemetry
+2024-11-12 23:04:52,105 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/requirements.txt
+2024-11-12 23:04:52,105 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/wandb-metadata.json
+2024-11-12 23:04:54,288 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/output.log
+2024-11-12 23:04:54,404 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: status_report
+2024-11-12 23:04:59,507 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: status_report
+2024-11-12 23:04:59,958 DEBUG   SenderThread:252906 [sender.py:send():379] send: exit
+2024-11-12 23:04:59,958 INFO    SenderThread:252906 [sender.py:send_exit():586] handling exit code: 1
+2024-11-12 23:04:59,958 INFO    SenderThread:252906 [sender.py:send_exit():588] handling runtime: 9
+2024-11-12 23:05:00,011 INFO    SenderThread:252906 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-11-12 23:05:00,012 INFO    SenderThread:252906 [sender.py:send_exit():594] send defer
+2024-11-12 23:05:00,012 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:00,012 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 0
+2024-11-12 23:05:00,012 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:00,012 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-11-12 23:05:00,012 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 1
+2024-11-12 23:05:00,012 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:00,012 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 1
+2024-11-12 23:05:00,013 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:00,013 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-11-12 23:05:00,013 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 2
+2024-11-12 23:05:00,013 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:00,013 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 2
+2024-11-12 23:05:00,013 INFO    HandlerThread:252906 [system_monitor.py:finish():203] Stopping system monitor
+2024-11-12 23:05:00,013 DEBUG   SystemMonitor:252906 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-11-12 23:05:00,014 INFO    HandlerThread:252906 [interfaces.py:finish():202] Joined cpu monitor
+2024-11-12 23:05:00,014 DEBUG   SystemMonitor:252906 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-11-12 23:05:00,014 INFO    HandlerThread:252906 [interfaces.py:finish():202] Joined disk monitor
+2024-11-12 23:05:00,015 DEBUG   SystemMonitor:252906 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-11-12 23:05:00,992 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/wandb-summary.json
+2024-11-12 23:05:01,799 INFO    HandlerThread:252906 [interfaces.py:finish():202] Joined gpu monitor
+2024-11-12 23:05:01,799 INFO    HandlerThread:252906 [interfaces.py:finish():202] Joined memory monitor
+2024-11-12 23:05:01,799 INFO    HandlerThread:252906 [interfaces.py:finish():202] Joined network monitor
+2024-11-12 23:05:01,800 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-12 23:05:01,800 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:01,800 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-11-12 23:05:01,800 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 3
+2024-11-12 23:05:01,800 DEBUG   SenderThread:252906 [sender.py:send():379] send: stats
+2024-11-12 23:05:01,801 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: poll_exit
+2024-11-12 23:05:01,801 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:01,801 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 3
+2024-11-12 23:05:01,802 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:01,802 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-11-12 23:05:01,802 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 4
+2024-11-12 23:05:01,802 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:01,802 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 4
+2024-11-12 23:05:01,802 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:01,802 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-11-12 23:05:01,802 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 5
+2024-11-12 23:05:01,802 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:01,802 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 5
+2024-11-12 23:05:01,803 DEBUG   SenderThread:252906 [sender.py:send():379] send: summary
+2024-11-12 23:05:01,903 INFO    SenderThread:252906 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-11-12 23:05:01,904 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:01,904 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-11-12 23:05:01,904 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 6
+2024-11-12 23:05:01,904 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:01,904 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 6
+2024-11-12 23:05:01,904 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:01,904 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-11-12 23:05:01,909 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: status_report
+2024-11-12 23:05:01,959 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-12 23:05:02,072 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 7
+2024-11-12 23:05:02,073 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: poll_exit
+2024-11-12 23:05:02,073 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:02,073 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 7
+2024-11-12 23:05:02,073 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:02,073 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-11-12 23:05:02,136 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/config.yaml
+2024-11-12 23:05:02,136 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/wandb-summary.json
+2024-11-12 23:05:02,959 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-12 23:05:03,203 INFO    Thread-12 :252906 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/config.yaml
+2024-11-12 23:05:03,441 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 8
+2024-11-12 23:05:03,441 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: poll_exit
+2024-11-12 23:05:03,442 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:03,442 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 8
+2024-11-12 23:05:03,442 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:03,442 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-11-12 23:05:03,442 INFO    SenderThread:252906 [job_builder.py:build():318] Attempting to build job artifact
+2024-11-12 23:05:03,466 INFO    SenderThread:252906 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-11-12 23:05:03,512 INFO    SenderThread:252906 [job_builder.py:build():431] adding wandb-job metadata file
+2024-11-12 23:05:03,538 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 9
+2024-11-12 23:05:03,538 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:03,538 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 9
+2024-11-12 23:05:03,538 DEBUG   SenderThread:252906 [sender.py:send():379] send: artifact
+2024-11-12 23:05:03,692 INFO    SenderThread:252906 [sender.py:send_artifact():1468] sent artifact job-git_github.com_DanYoto_Pretrain_LLM.git_PPO_PPO.py - {'id': 'QXJ0aWZhY3Q6MzAwMDU=', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNzEy', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzAwNTI=', 'versionIndex': 2}}}
+2024-11-12 23:05:03,692 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:03,692 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-11-12 23:05:03,692 INFO    SenderThread:252906 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-11-12 23:05:03,960 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-12 23:05:04,411 INFO    SenderThread:252906 [dir_watcher.py:finish():388] scan: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files
+2024-11-12 23:05:04,438 INFO    SenderThread:252906 [dir_watcher.py:finish():402] scan save: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/config.yaml config.yaml
+2024-11-12 23:05:04,438 INFO    SenderThread:252906 [dir_watcher.py:finish():402] scan save: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/output.log output.log
+2024-11-12 23:05:04,441 INFO    SenderThread:252906 [dir_watcher.py:finish():402] scan save: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/requirements.txt requirements.txt
+2024-11-12 23:05:04,441 INFO    SenderThread:252906 [dir_watcher.py:finish():402] scan save: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/wandb-metadata.json wandb-metadata.json
+2024-11-12 23:05:04,441 INFO    SenderThread:252906 [dir_watcher.py:finish():402] scan save: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/wandb-summary.json wandb-summary.json
+2024-11-12 23:05:04,524 INFO    SenderThread:252906 [dir_watcher.py:finish():402] scan save: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/code/PPO/PPO.py code/PPO/PPO.py
+2024-11-12 23:05:04,524 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 10
+2024-11-12 23:05:04,524 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: poll_exit
+2024-11-12 23:05:04,524 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:04,524 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 10
+2024-11-12 23:05:04,525 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:04,525 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-11-12 23:05:04,525 INFO    SenderThread:252906 [file_pusher.py:finish():172] shutting down file pusher
+2024-11-12 23:05:04,730 INFO    wandb-upload_0:252906 [upload_job.py:push():131] Uploaded file /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/config.yaml
+2024-11-12 23:05:04,744 INFO    wandb-upload_1:252906 [upload_job.py:push():131] Uploaded file /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/output.log
+2024-11-12 23:05:04,793 INFO    wandb-upload_3:252906 [upload_job.py:push():131] Uploaded file /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/wandb-summary.json
+2024-11-12 23:05:04,816 INFO    wandb-upload_2:252906 [upload_job.py:push():131] Uploaded file /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/files/requirements.txt
+2024-11-12 23:05:04,960 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-12 23:05:04,961 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: poll_exit
+2024-11-12 23:05:05,016 INFO    Thread-11 (_thread_body):252906 [sender.py:transition_state():614] send defer: 11
+2024-11-12 23:05:05,017 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:05,017 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 11
+2024-11-12 23:05:05,017 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:05,017 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-11-12 23:05:05,017 INFO    SenderThread:252906 [file_pusher.py:join():178] waiting for file pusher
+2024-11-12 23:05:05,018 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 12
+2024-11-12 23:05:05,018 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:05,018 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 12
+2024-11-12 23:05:05,018 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:05,018 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-11-12 23:05:05,018 INFO    SenderThread:252906 [file_stream.py:finish():614] file stream finish called
+2024-11-12 23:05:05,050 INFO    SenderThread:252906 [file_stream.py:finish():618] file stream finish is done
+2024-11-12 23:05:05,050 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 13
+2024-11-12 23:05:05,050 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:05,050 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 13
+2024-11-12 23:05:05,050 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:05,050 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-11-12 23:05:05,050 INFO    SenderThread:252906 [sender.py:transition_state():614] send defer: 14
+2024-11-12 23:05:05,051 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: defer
+2024-11-12 23:05:05,051 INFO    HandlerThread:252906 [handler.py:handle_request_defer():172] handle defer: 14
+2024-11-12 23:05:05,051 DEBUG   SenderThread:252906 [sender.py:send():379] send: final
+2024-11-12 23:05:05,051 DEBUG   SenderThread:252906 [sender.py:send():379] send: footer
+2024-11-12 23:05:05,051 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: defer
+2024-11-12 23:05:05,051 INFO    SenderThread:252906 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-11-12 23:05:05,052 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-12 23:05:05,052 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: poll_exit
+2024-11-12 23:05:05,052 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: poll_exit
+2024-11-12 23:05:05,053 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: poll_exit
+2024-11-12 23:05:05,053 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: server_info
+2024-11-12 23:05:05,053 DEBUG   SenderThread:252906 [sender.py:send_request():406] send_request: server_info
+2024-11-12 23:05:05,055 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: get_summary
+2024-11-12 23:05:05,055 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: sampled_history
+2024-11-12 23:05:05,056 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: internal_messages
+2024-11-12 23:05:05,078 INFO    MainThread:252906 [wandb_run.py:_footer_history_summary_info():3920] rendering history
+2024-11-12 23:05:05,078 INFO    MainThread:252906 [wandb_run.py:_footer_history_summary_info():3952] rendering summary
+2024-11-12 23:05:05,078 INFO    MainThread:252906 [wandb_run.py:_footer_sync_info():3879] logging synced files
+2024-11-12 23:05:05,078 DEBUG   HandlerThread:252906 [handler.py:handle_request():146] handle_request: shutdown
+2024-11-12 23:05:05,079 INFO    HandlerThread:252906 [handler.py:finish():866] shutting down handler
+2024-11-12 23:05:06,053 INFO    WriterThread:252906 [datastore.py:close():296] close: /mnt/batch/tasks/shared/LS_root/mounts/clusters/yutong-8gpus-training/code/Users/yutong.jiang2/Pretrain_LLM/PPO/wandb/run-20241112_230447-wnrxrf60/run-wnrxrf60.wandb
+2024-11-12 23:05:06,078 INFO    SenderThread:252906 [sender.py:finish():1546] shutting down sender
+2024-11-12 23:05:06,078 INFO    SenderThread:252906 [file_pusher.py:finish():172] shutting down file pusher
+2024-11-12 23:05:06,078 INFO    SenderThread:252906 [file_pusher.py:join():178] waiting for file pusher
